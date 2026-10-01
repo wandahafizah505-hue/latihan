@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Siswa - Kelas 11 RPL</title>
+    <link rel="stylesheet" href="nilai.css">
+    <!-- Library SheetJS untuk Export Excel -->
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+
+    <!-- INPUT SISWA & JURUSAN -->
+    <div class="box" id="loginBox">
+        <h1>INPUT DATA SISWA</h1>
+
+        <input type="text" id="username" placeholder="Masukkan nama siswa">
+        
+        <!-- JURUSAN / KELAS DILOCK (11 RPL) -->
+        <input type="text" id="kelas" value="11 RPL (Rekayasa Perangkat Lunak)" readonly class="readonly-input">
+        
+        <p id="pesan"></p>
+
+        <!-- FITUR MUSIK -->
+        <div class="music-section">
+            <p class="music-title">🎵 CARI & PUTAR LAGU</p>
+            
+            <input type="text" id="songInput" placeholder="Masukkan judul lagu / penyanyi">
+            
+            <button type="button" onclick="searchSong()" class="btn-search">
+                CARI LAGU
+            </button>
+
+            <div id="musicResults" class="music-results"></div>
+
+            <div id="playerContainer" class="hidden player-container">
+                <b id="trackTitle"></b>
+                <span id="trackArtist"></span>
+                <audio id="audioPlayer" controls></audio>
+            </div>
+        </div>
+
+        <button onclick="login()" class="btn-main">
+            LANJUT KE INPUT NILAI
+        </button>
+    </div>
+
+    <!-- TABEL DATA SISWA -->
+    <div class="box hidden box-wide" id="nilaiBox">
+        <h1>DATA NILAI SISWA (11 RPL)</h1>
+
+        <p>Nama Siswa: <b id="nama"></b> | Jurusan: <b id="tampilKelas">11 RPL</b></p>
+
+        <!-- INPUT NILAI -->
+        <input type="number" id="nilai" placeholder="Masukkan nilai (0 - 100)" min="0" max="100">
+
+        <div class="hasil">
+            <p>Grade: <b id="grade">-</b></p>
+            <p>Kondisi: <b id="kondisi">-</b></p>
+        </div>
+
+        <button onclick="tambahData()" class="btn-simpan">
+            + SIMPAN DATA KE TABEL
+        </button>
+
+        <!-- TABEL HASIL REKAP DATA -->
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>Jurusan</th>
+                        <th>Nilai</th>
+                        <th>Grade</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="tabelSiswa">
+                    <!-- Data siswa bertambah di sini -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- TOMBOL EXPORT EXCEL & RESET -->
+        <button onclick="exportKeExcel()" class="btn-excel">
+            📥 DOWNLOAD / EXPORT KE EXCEL (.XLSX)
+        </button>
+
+        <button onclick="logout()" class="btn-reset">
+            RESET / HAPUS SEMUA DATA
+        </button>
+    </div>
+
+    <script src="C:\Users\ASUS\Documents\.vscode\login.js"></script>
+</body>
+</html>

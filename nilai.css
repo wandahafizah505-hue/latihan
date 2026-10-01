@@ -1,0 +1,203 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:
+        radial-gradient(circle at 15% 20%, #ff4d6d 0, transparent 30%),
+        radial-gradient(circle at 85% 15%, #7b61ff 0, transparent 30%),
+        radial-gradient(circle at 80% 85%, #00d4a8 0, transparent 30%),
+        radial-gradient(circle at 20% 80%, #ff9f1c 0, transparent 30%),
+        linear-gradient(135deg, #111827, #1e293b);
+}
+
+.box {
+    width: 450px;
+    padding: 30px;
+    background: white;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+.box-wide {
+    width: 700px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: white;
+}
+
+.readonly-input {
+    background-color: #f1f1f1;
+    cursor: not-allowed;
+    font-weight: bold;
+    text-align: center;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    font-size: 15px;
+    border: none;
+    border-radius: 8px;
+    background: #222;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.btn-main {
+    margin-top: 20px;
+    background: #222;
+}
+
+.btn-search {
+    margin-top: 5px;
+    background: #7b61ff;
+}
+
+.btn-simpan {
+    background: #00d4a8;
+    color: #111;
+    font-weight: bold;
+}
+
+.btn-excel {
+    background: #107c41; /* Warna hijau khas Excel */
+    color: white;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.btn-reset {
+    background: #ff4d6d;
+    margin-top: 10px;
+}
+
+.hasil {
+    margin-top: 15px;
+    padding: 10px;
+    background: #f1f1f1;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.hidden {
+    display: none;
+}
+
+#pesan {
+    color: red;
+    font-size: 13px;
+    margin: 5px 0;
+}
+
+/* FITUR MUSIK */
+.music-section {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px dashed #ccc;
+    text-align: center;
+}
+
+.music-title {
+    margin: 0 0 10px 0;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.music-results {
+    margin-top: 10px;
+    max-height: 120px;
+    overflow-y: auto;
+}
+
+.player-container {
+    margin-top: 15px;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+#trackTitle {
+    display: block;
+    font-size: 14px;
+    color: #333;
+}
+
+#trackArtist {
+    font-size: 12px;
+    color: #666;
+}
+
+#audioPlayer {
+    width: 100%;
+    margin-top: 8px;
+}
+
+/* TABEL STYLES */
+.table-container {
+    margin-top: 20px;
+    max-height: 250px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #1e293b;
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.lulus {
+    color: green;
+    font-weight: bold;
+}
+
+.gagal {
+    color: red;
+    font-weight: bold;
+}
